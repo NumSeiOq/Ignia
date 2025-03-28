@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nobre Consultoria</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <img src="Figuras/Logo.png" alt="Logo da Nobre Consultoria" class="logo">
+        <h1>Nobre Consultoria</h1>
+    </header>
+
+   
+    <h2>Consultoria Geral e Jurídica em Brasília</h2>
+    <h3>Consultoria de alta qualidade para sua empresa</h3>
+
+   
+    <p>O escritório <strong>Nobre Consultoria</strong> oferece consultoria jurídica especializada com foco em resultados rápidos e eficazes. A seguir, você pode calcular o orçamento estimado para os serviços com base nas horas de consultoria.</p>
+
+    <p>Nosso trabalho é fornecer soluções jurídicas para empresas de todos os tamanhos. <em>Garantimos agilidade e eficácia nas respostas para as necessidades do seu negócio.</em></p>
+
+    <p>Contamos com uma equipe altamente qualificada, pronta para oferecer suporte jurídico em diversas áreas. <u>Consultoria tributária, trabalhista, cível, empresarial e mais.</u></p>
+
+    <p>Nosso objetivo é ser referência na consultoria jurídica em Brasília, proporcionando resultados sólidos e soluções inovadoras. <u><strong>Não hesite em nos contactar.</strong></u></p>
+
+    <div class="form-group">
+        <label for="horas">Quantas horas de consultoria você acha que precisa?</label><br>
+        <input type="number" id="horas" min="1" placeholder="Digite as horas">
+        <button onclick="calcularOrcamento()">Calcular Orçamento</button>
+    </div>
+
+   
+    <div class="result" id="orcamentoResult"></div>
+
+  
+    <div class="code">
+        <h3>Como funciona o cálculo?</h3>
+        <p>O cálculo do orçamento é feito multiplicando o número de horas de consultoria pelo valor da hora (R$150,00). Exemplo: 20 horas x R$150,00 = R$3000,00.</p>
+    </div>
+
+    <!-- Links para outras páginas -->
+    
+    <ul>
+    <b> <h3> Links para outras páginas:
+        <li><a href="paginas/consultoria-tributaria.html">Consultoria Tributária</a></li>
+        <li><a href="paginas/consultoria-trabalhista.html">Consultoria Trabalhista</a></li>
+        <li><a href="Paginas/form.html">Formulário de Consultoria</a></li>
+        <li><a href="Paginas/conheça-nosso-escritorio.html">Conheça nosso Escritório</a></li>
+    <!--Só está feito até aqui -->
+        <li><a href="paginas/consultoria-civel.html">Consultoria Cível</a></li>
+        <li><a href="paginas/consultoria-empresarial.html">Consultoria Empresarial</a></li>
+        <li><a href="paginas/consultoria-internacional.html">Consultoria Internacional</a></li>
+        <li><a href="paginas/defesa-judicial.html">Defesa Judicial</a></li>
+        
+</h3>
+    </ul>
+
+    <footer>
+        <p>Criado por <strong>Caio V.</strong></p>
+    </footer>
+
+    <script>
+        function calcularOrcamento() {
+            let numeroDeHoras = document.getElementById('horas').value;
+            if (numeroDeHoras <= 0 || isNaN(numeroDeHoras)) {
+                alert("Por favor, insira um número válido de horas.");
+                return;
+            }
+            let valorPorHora = 150;
+            let orcamentoTotal = numeroDeHoras * valorPorHora;
+            document.getElementById("orcamentoResult").innerHTML = 
+                "O orçamento estimado para " + numeroDeHoras + " horas de consultoria é: R$" + orcamentoTotal;
+        }
+    </script>
+
+</body>
+</html>

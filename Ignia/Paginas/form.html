@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Consultoria</title>
+    <link rel="stylesheet" href="/Estilos/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <img src="/Figuras/Logo.png" alt="Logo da Nobre Consultoria" class="logo">
+        <h1>Formulário de Consultoria</h1>
+    </header>
+
+    <form action="#" method="post">
+        
+        <fieldset>
+            <legend>Informações Pessoais</legend>
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu email" required><br><br>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone" required><br><br>
+        </fieldset>
+
+        
+        <fieldset>
+            <legend>Consultoria de Interesse</legend>
+            <label for="consultoria-tributaria">Consultoria Tributária</label>
+            <input type="radio" id="consultoria-tributaria" name="consultoria" value="tributaria"><br><br>
+
+            <label for="consultoria-trabalhista">Consultoria Trabalhista</label>
+            <input type="radio" id="consultoria-trabalhista" name="consultoria" value="trabalhista"><br><br>
+
+            <label for="consultoria-civel">Consultoria Cível</label>
+            <input type="radio" id="consultoria-civel" name="consultoria" value="civel"><br><br>
+
+            <label for="consultoria-empresarial">Consultoria Empresarial</label>
+            <input type="radio" id="consultoria-empresarial" name="consultoria" value="empresarial"><br><br>
+
+            <label for="consultoria-internacional">Consultoria Internacional</label>
+            <input type="radio" id="consultoria-internacional" name="consultoria" value="internacional"><br><br>
+        </fieldset>
+
+        
+        <fieldset>
+            <legend>Preferências</legend>
+            <label for="preferencias">Quais são suas preferências?</label><br>
+            <input type="checkbox" id="preferencia1" name="preferencia" value="opcao1"> Atendimento Online<br>
+            <input type="checkbox" id="preferencia2" name="preferencia" value="opcao2"> Atendimento Presencial<br>
+            <input type="checkbox" id="preferencia3" name="preferencia" value="opcao3"> Atendimento Hibrido<br><br>
+        </fieldset>
+
+    
+        <fieldset>
+            <legend>Localização</legend>
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" placeholder="Digite sua cidade" required><br><br>
+
+            <label for="estado">Estado:</label>
+            <select id="estado" name="estado" required>
+                <option value="df">Distrito Federal</option>
+                <option value="sp">São Paulo</option>
+                <option value="rj">Rio de Janeiro</option>
+                <option value="mg">Minas Gerais</option>
+                <option value="rs">Rio Grande do Sul</option>
+            </select><br><br>
+
+            <label for="endereco">Endereço:</label>
+            <textarea id="endereco" name="endereco" rows="3" placeholder="Digite seu endereço" required></textarea><br><br>
+        </fieldset>
+
+     
+        <fieldset>
+            <legend>Outras Informações</legend>
+            <label for="comentarios">Comentários:</label>
+            <textarea id="comentarios" name="comentarios" rows="4" placeholder="Comentários adicionais"></textarea><br><br>
+
+            <label for="termos">Aceito os termos e condições:</label>
+            <input type="checkbox" id="termos" name="termos" value="aceito" required><br><br>
+        </fieldset>
+
+        <!-- Botões de Envio e Reset -->
+        <input type="reset" value="Limpar">
+        <input type="submit" value="Enviar">
+    </form>
+    <footer>
+        <a href="/index.html">Voltar para a página inicial</a>
+    </footer>
+</body>
+</html>
